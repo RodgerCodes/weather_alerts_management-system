@@ -27,7 +27,7 @@
         </div>
         <div class="mb-4">
             <label for="email" class="sr-only">Email</label>
-            <input type="email" name="emai" id="" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" placeholder="Email">
+            <input type="email" name="email" id="" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" placeholder="Email">
 
             @error('email')
                 <div class="text-red-500 mt-2 text-sm">
