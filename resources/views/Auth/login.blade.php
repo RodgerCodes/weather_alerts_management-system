@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex justify-center">
-    <div class="w-4/12 bg-white p-6 rounded-lg">
+<div class="flex justify-center mt-32 h-8/12">
+    <div class="flex bg-white w-8/12 justify-between rounded-lg">
+  <div class="bg-gray-100 flex items-center rounded-lg">
+      <img width="400" src="{{asset('img/wl.png')}}" alt="">
+  </div>
+   
+    <div class="w-6/12 p-6 rounded-lg">
         @if(session('status'))
           <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center ">
             {{session('status')}}
@@ -37,8 +42,9 @@
         <div class="mb-4">
             <button type="submit" class="w-full p-3 bg-blue-500 rounded-lg text-white">Login</button>
         </div>
-    .</form>
+    </form>
     </div>
+</div>
 </div>
     
 @endsection
