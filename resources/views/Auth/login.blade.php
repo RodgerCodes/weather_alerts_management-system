@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex justify-center mt-32 h-8/12">
+<div class="flex justify-center mt-32 h-8/12" >
     <div class="flex bg-white w-8/12 justify-between rounded-lg">
   <div class="bg-gray-100 flex items-center rounded-lg">
       <img width="400" src="{{asset('img/wl.png')}}" alt="">
