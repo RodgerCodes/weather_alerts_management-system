@@ -7,34 +7,27 @@
     <title>Weather alerts | CMS</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body class="bg-gray-200">
-    <nav class="p-6 bg-white flex justify-between mb-6">
-       <ul class="flex items-center">
+<body class="bg-gray-200" @guest
+    style="background:url('img/ty.jpg'); background-size:cover; background-position:center; "
+@endguest>
+    @auth
+        <nav class="p-6 bg-white flex justify-between mb-6">
+            <ul class="flex items-center">
         
-<<<<<<< Updated upstream
-           <li><a href="" class="p-3">Home</a></li>
-           <li><a href="" class="p-3">Categories</a></li>  
-       </ul>
-       <ul class="flex items-center">
-           <li><a href="{{route('register')}}" class="p-3">Register</a></li>
-           <li><a href="{{route('login')}}" class="p-3">Login</a></li>
-           <li><a href="" class="p-3">Logout</a></li>
-       </ul>
-=======
-                <li><a href="" class="p-3">Home</a></li>
+                <li><a href="{{route('dashboard')}}" class="p-3">Home</a></li>
                 <li><a href="" class="p-3">Categories</a></li>  
                 
             </ul>
             <ul class="flex items-center">
                 <li><a href="{{route('register')}}" class="p-3">Register</a></li>
-                <li><a href="">{{auth()->user()->name}}</a></li>
+                 <p class="p-3">{{auth()->user()->name}}</p>
                 <form action="{{route('logout')}}" method="POST">
                     @csrf
-                    <button type="submit">Logout</button>
+                  <button type="submit">Logout</button>
                 </form>
             </ul>
->>>>>>> Stashed changes
     </nav>
+    @endauth
     @yield('content')
 </body>
 </html>
