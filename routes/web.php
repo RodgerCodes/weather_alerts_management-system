@@ -15,5 +15,10 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/', [LoginController::class, 'store'])->name('login.store');
 
+// logout
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/add', [DashboardController::class, 'add'])->name('add');
+Route::post('/dashboard/add', [DashboardController::class, 'store'])->name('add.store');
